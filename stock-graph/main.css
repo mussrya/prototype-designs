@@ -1,0 +1,175 @@
+html, body{
+    font-family: Lato, Helvetica, Arial;
+}
+
+:root {
+    --darkest-blue: #151c26;
+    --dark-blue: #1a212b;
+    --blue: #2caccf;
+    --text-header: #69839c;
+    --text-green: #a4cc2d;
+    --text-red: #cc433f;
+    --blue-border: #343b45;
+    --white-accent: #9ba0a6;
+    --text-white: #fff;
+    --text-grey: #e9e9eb;
+    --text-blue: #33b0cc;
+    --text-black: #18191d;
+    --alternate-row: #f2f3f5;
+    --light-grey: #f0f0f0;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.header {
+    background: var(--darkest-blue);
+    color: var(--text-white);
+    height: 130px;
+    padding-top: 40px;
+}
+
+.blueText {
+    color: var(--text-blue);
+}
+
+.circleBorder {
+    border-radius: 50%;
+    padding: 14px 15px;
+}
+
+.blueBorder{
+    border: 2px solid var(--blue-border);
+}
+
+.lightGreyBorder{
+    border: 2px solid var(--light-grey);
+}
+
+.unBold {
+    font-weight: normal;
+}
+
+.paddingtop10 {
+    padding-top: 10px;
+}
+
+.paddingtop15 {
+    padding-top: 15px;
+}
+
+.paddingLeft10 {
+    padding-left: 10px;
+}
+
+.resetFont {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.mutedHeader {
+    font-size: 10px;
+    margin: 8px 0 4px 0;
+    font-weight: bold;
+    color: var(--text-grey);
+}
+
+.borderRadius {
+    border-radius: 50%;
+}
+
+.chartPlaceholder {
+    width: 130%;
+    overflow:hidden;
+    padding: 90px 0 20px 0;
+    background: var(--dark-blue);
+    margin: 0 -90px;
+}
+
+.searchBox {
+    width: 230px;
+    border: 2px solid var(--light-grey);
+    padding: 10px 10px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-left: 18px;
+}
+
+.searchBox input {
+    border: 0;
+    background: 0;
+    margin-left: 25px;
+}
+
+.marginTop25{
+    margin-top: 25px;
+}
+
+.marginTop15{
+    margin-top: 15px;
+}
+
+.marginTop10{
+    margin-top: 10px;
+}
+
+.marginTop5{
+    margin-top: 5px;
+}
+
+.marginLeft10{
+    margin-left: 10px;
+}
+
+.tableHeader .fa{
+    color: var(--white-accent);
+}
+
+.customIndent{
+    padding: 0 20px;
+}
+
+.table-responsive {
+    display: table;
+}
+
+.goodStatus{
+    color: var(--text-green);
+}
+
+.badStatus{
+    color: var(--text-red);
+}
+
+.table{
+    font-size: 13px;
+}
+
+.table thead th{
+    font-weight: bold!important;
+    text-transform: uppercase;
+    color: var(--text-header);
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+
+.searchBox .fa{
+    position: absolute;
+    margin: 4px 0 0 3px;
+}
+
+input:focus{
+    outline:0!important;
+}
+
+.lightGreyBorder:hover{
+    background-color: var(--text-header);
+    color: var(--text-white);
+    cursor:pointer;
+    transition: ease-in all 0.1s;
+}
+
+.pointer{
+    cursor: pointer;
+}

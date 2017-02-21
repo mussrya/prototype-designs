@@ -1,12 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stock Graph Prototype</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A stock graph prototype design">
+    <meta name="robots" content="index,follow,noodp">
+    <title>Stock Graph Prototype Design</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/libraries/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div class="container-fluid" style="z-index:2;">
+    <div class="header row">
+        <div class="col-md-1">
+            <i class="fa fa-line-chart fa-3x blueText pull-right" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-sm-2">
+                    <i class="fa fa-file-text-o blueBorder circleBorder pull-right" aria-hidden="true"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h4 class="unBold paddingtop10">
+                        Stocks
+                        <i class="fa fa-chevron-down pull-right resetFont paddingtop10"></i>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-3 text-center">
+                    <h6 class="mutedHeader">
+                        MARKET VALUE
+                    </h6>
+                    <h4>
+                        $31,958
+                    </h4>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <h6 class="mutedHeader">
+                        EXPENDITURE
+                    </h6>
+                    <h4>
+                        $19,958
+                    </h4>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <h6 class="mutedHeader">
+                        QUANTITY
+                    </h6>
+                    <h4>
+                        451
+                    </h4>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row pointer">
+                        <div class="col-sm-4">
+                            <img class="img-fluid borderRadius pull-right"
+                                 src="http://ryan-musselwhite.com/reus/themes/purple/images/team/profile3.jpg">
+                        </div>
+                        <div class="col-sm-8 noPadding">
+                            <p class="paddingtop15">
+                                Hi, Jess
+                                <i class="fa fa-chevron-down resetFont paddingLeft10"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="overflow:hidden;">
+        <div class="chartPlaceholder">
+            <canvas id="chart" width="400" height="130"></canvas>
+        </div>
+    </div>
+    <div class="row customIndent tableHeader">
+        <div class="col-md-12">
+            <h4 class="pull-left blueText marginTop25 unBold">Current</h4>
+            <div class="marginTop10">
+                <div class="searchBox pull-right">
+                    <i class="fa fa-search absolute"></i>
+                    <input type="text" placeholder="Search..."/>
+                </div>
+                <i class="fa fa-upload lightGreyBorder circleBorder pull-right"></i>
+                <i class="fa fa-plus lightGreyBorder circleBorder pull-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row marginTop25">
+        <table class="table table-responsive table-striped">
+            <thead style="text-indent: 20px;">
+            <tr>
+                <th>
+                    Stock Name
+                </th>
+                <th>
+                    Stock Code
+                </th>
+                <th>
+                    Market
+                </th>
+                <th>
+                    Sector
+                </th>
+                <th>
+                    QTY
+                </th>
+                <th>
+                    Original Buy-in Amount
+                </th>
+                <th>
+                    Current Value
+                </th>
+                <th>
+                    Profit / Loss
+                </th>
+            </tr>
+            </thead>
+            <tbody style="text-indent: 20px;">
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td>
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td>
+                    Technology
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<img style=" position: absolute;left: 0;top: 0;width: 100%;height: auto;opacity: 0;"
+     src="https://static1.squarespace.com/static/52934df9e4b0de25af331f19/t/55106acbe4b010138765e78e/1427139280751/?format=2500w">
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type="text/javascript">
+
+    var ctx = document.getElementById("chart");
+
+    var data = {
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC", "JAN", "FEB"],
+        datasets: [
+            {
+                label: "Stock",
+                fill: true,
+                lineTension: 0.4,
+                backgroundColor: "rgba(23,61,74,0.5)",
+                borderColor: "rgba(0,156,181,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 3,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 4,
+                pointRadius: 2,
+                pointHitRadius: 10,
+                data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+                spanGaps: false
+            }
+        ]
+    };
+    var myLineChart = new Chart(
+        ctx, {
+            type: 'line',
+            data: data,
+            responsive: true,
+            maintainAspectRatio: false,
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            ticks: {
+                                padding: 30,
+                                fontStyle: 'bold',
+                                fontFamily: 'Lato, Helvetica',
+                                labelOffet: 10,
+                                fontColor: '#9ba0a6'
+                            },
+                            gridLines: {
+                                display: true,
+                                color: "rgba(155, 160, 166, 0.1)",
+                                tickMarkLength: 15
+                            }
+                        }
+                    ],
+                    yAxes: [
+                        {
+                            display: false,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    );
+
+</script>
 </body>
 </html>
