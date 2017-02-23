@@ -38,26 +38,6 @@ html, body{
     font-size: 50px;
 }
 
-@media only screen and (max-width: 1015px){
-    .fa-line-chart{
-        font-size: 36px;
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .table thead th{
-        font-size: 10px!important;
-        text-indent: 0;
-        text-align: center;
-    }
-
-    .searchBox{
-        width:100%!important;
-        margin-left: 0!important;
-    }
-}
-
 .blueHeaderBorder{
     border-left: 1px solid var(--blue-border);
 }
@@ -77,6 +57,10 @@ html, body{
 
 .lightGreyBorder{
     border: 2px solid var(--light-grey);
+}
+
+.darkBlueBackground{
+    background-color: var(--dark-blue);
 }
 
 .unBold {
@@ -117,6 +101,10 @@ html, body{
     padding: 40px 0 20px 0;
     background: var(--dark-blue);
     margin: 0 -90px;
+}
+
+.chartText{
+    padding-top: 40px;
 }
 
 .searchBox {
@@ -213,4 +201,32 @@ input:focus{
 .smallerFont{
     font-size: 11px;
     vertical-align: middle;
+}
+
+@media only screen and (max-width: 1015px){
+    .fa-line-chart{
+        font-size: 36px;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .table thead th{
+        font-size: 10px!important;
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .searchBox{
+        width:100%!important;
+        margin-left: 0!important;
+    }
+
+    .chartPlaceholder{
+        padding: 20px 0;
+    }
+
+    .chartText{
+        padding-top: 20px;
+    }
 }
