@@ -30,6 +30,38 @@ html, body{
     padding-top: 40px;
 }
 
+.header .img-fluid{
+    max-height:65px;
+}
+
+.fa-line-chart{
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 1015px){
+    .fa-line-chart{
+        font-size: 36px;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .table thead th{
+        font-size: 10px!important;
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .searchBox{
+        width:100%!important;
+        margin-left: 0!important;
+    }
+}
+
+.blueHeaderBorder{
+    border-left: 1px solid var(--blue-border);
+}
+
 .blueText {
     color: var(--text-blue);
 }
@@ -82,13 +114,13 @@ html, body{
 .chartPlaceholder {
     width: 130%;
     overflow:hidden;
-    padding: 90px 0 20px 0;
+    padding: 40px 0 20px 0;
     background: var(--dark-blue);
     margin: 0 -90px;
 }
 
 .searchBox {
-    width: 230px;
+    width: 100%;
     border: 2px solid var(--light-grey);
     padding: 10px 10px;
     border-radius: 30px;
@@ -172,4 +204,13 @@ input:focus{
 
 .pointer{
     cursor: pointer;
+}
+
+.whiteText{
+    color: var(--text-white);
+}
+
+.smallerFont{
+    font-size: 11px;
+    vertical-align: middle;
 }

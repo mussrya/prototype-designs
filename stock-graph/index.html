@@ -16,15 +16,15 @@
 <body>
 <div class="container-fluid" style="z-index:2;">
     <div class="header row">
-        <div class="col-md-1">
-            <i class="fa fa-line-chart fa-3x blueText pull-right" aria-hidden="true"></i>
+        <div class="col-2 col-md-1">
+            <i class="fa fa-line-chart blueText pull-right" aria-hidden="true"></i>
         </div>
-        <div class="col-md-5">
+        <div class="col-5 col-md-5">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-2 hidden-md-down col-md-2">
                     <i class="fa fa-file-text-o blueBorder circleBorder pull-right" aria-hidden="true"></i>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-11 col-md-8">
                     <h4 class="unBold paddingtop10">
                         Stocks
                         <i class="fa fa-chevron-down pull-right resetFont paddingtop10"></i>
@@ -32,9 +32,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-5 col-md-6">
             <div class="row">
-                <div class="col-sm-3 text-center">
+                <div class="col-3 col-md-4 col-lg-3 hidden-md-down blueHeaderBorder text-center">
                     <h6 class="mutedHeader">
                         MARKET VALUE
                     </h6>
@@ -42,7 +42,7 @@
                         $31,958
                     </h4>
                 </div>
-                <div class="col-sm-3 text-center">
+                <div class="col-3 col-lg-3 hidden-md-down blueHeaderBorder text-center">
                     <h6 class="mutedHeader">
                         EXPENDITURE
                     </h6>
@@ -50,7 +50,7 @@
                         $19,958
                     </h4>
                 </div>
-                <div class="col-sm-2 text-center">
+                <div class="col-3 col-lg-2 hidden-md-down blueHeaderBorder text-center">
                     <h6 class="mutedHeader">
                         QUANTITY
                     </h6>
@@ -58,13 +58,13 @@
                         451
                     </h4>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-12 col-md-7 col-lg-4">
                     <div class="row pointer">
-                        <div class="col-sm-4">
+                        <div class="col-5 col-sm-4 col-md-5 col-lg-4">
                             <img class="img-fluid borderRadius pull-right"
                                  src="http://ryan-musselwhite.com/reus/themes/purple/images/team/profile3.jpg">
                         </div>
-                        <div class="col-sm-8 noPadding">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 noPadding">
                             <p class="paddingtop15">
                                 Hi, Jess
                                 <i class="fa fa-chevron-down resetFont paddingLeft10"></i>
@@ -77,19 +77,33 @@
     </div>
     <div class="row" style="overflow:hidden;">
         <div class="chartPlaceholder">
-            <canvas id="chart" width="400" height="130"></canvas>
+            <div class="text-center">
+                <h5 class="mutedHeader">TODAY'S MARKET VALUE</h5>
+                <h2 class="whiteText marginTop15">
+                    $31,958
+                    <span class="smallerFont goodStatus"><i class="fa fa-angle-up"></i> 31%</span>
+                </h2>
+            </div>
+            <canvas id="chart" width="400" height="78"></canvas>
         </div>
     </div>
     <div class="row customIndent tableHeader">
-        <div class="col-md-12">
+        <div class="col-12 col-sm-3 col-md-4">
             <h4 class="pull-left blueText marginTop25 unBold">Current</h4>
-            <div class="marginTop10">
-                <div class="searchBox pull-right">
-                    <i class="fa fa-search absolute"></i>
-                    <input type="text" placeholder="Search..."/>
+        </div>
+        <div class="marginTop10 col-12 col-sm-9 col-md-8 noPadding">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-7 col-lg-8 noPadding">
+                    <i class="fa fa-upload lightGreyBorder circleBorder pull-right"></i>
+                    <i class="fa fa-plus lightGreyBorder circleBorder pull-right"></i>
                 </div>
-                <i class="fa fa-upload lightGreyBorder circleBorder pull-right"></i>
-                <i class="fa fa-plus lightGreyBorder circleBorder pull-right"></i>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-4">
+                    <div class="marginTop15 hidden-sm-up"></div>
+                    <div class="searchBox">
+                        <i class="fa fa-search absolute"></i>
+                        <input type="text" placeholder="Search..."/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,19 +114,19 @@
                 <th>
                     Stock Name
                 </th>
-                <th>
+                <th class="hidden-md-down">
                     Stock Code
                 </th>
                 <th>
                     Market
                 </th>
-                <th>
+                <th class="hidden-md-down">
                     Sector
                 </th>
-                <th>
+                <th class="hidden-md-down">
                     QTY
                 </th>
-                <th>
+                <th class="hidden-md-down">
                     Original Buy-in Amount
                 </th>
                 <th>
@@ -128,149 +142,19 @@
                 <td>
                     Amazon
                 </td>
-                <td>
+                <td class="hidden-md-down">
                     AMZN
                 </td>
                 <td>
                     NASDAQ
                 </td>
-                <td>
+                <td class="hidden-md-down">
                     Technology
                 </td>
-                <td>
+                <td class="hidden-md-down">
                     100
                 </td>
-                <td>
-                    $54,000
-                </td>
-                <td>
-                    $84,500
-                </td>
-                <td class="goodStatus">
-                    +156.48%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Amazon
-                </td>
-                <td>
-                    AMZN
-                </td>
-                <td>
-                    NASDAQ
-                </td>
-                <td>
-                    Technology
-                </td>
-                <td>
-                    100
-                </td>
-                <td>
-                    $54,000
-                </td>
-                <td>
-                    $84,500
-                </td>
-                <td class="goodStatus">
-                    +156.48%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Amazon
-                </td>
-                <td>
-                    AMZN
-                </td>
-                <td>
-                    NASDAQ
-                </td>
-                <td>
-                    Technology
-                </td>
-                <td>
-                    100
-                </td>
-                <td>
-                    $54,000
-                </td>
-                <td>
-                    $84,500
-                </td>
-                <td class="goodStatus">
-                    +156.48%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Amazon
-                </td>
-                <td>
-                    AMZN
-                </td>
-                <td>
-                    NASDAQ
-                </td>
-                <td>
-                    Technology
-                </td>
-                <td>
-                    100
-                </td>
-                <td>
-                    $54,000
-                </td>
-                <td>
-                    $84,500
-                </td>
-                <td class="goodStatus">
-                    +156.48%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Amazon
-                </td>
-                <td>
-                    AMZN
-                </td>
-                <td>
-                    NASDAQ
-                </td>
-                <td>
-                    Technology
-                </td>
-                <td>
-                    100
-                </td>
-                <td>
-                    $54,000
-                </td>
-                <td>
-                    $84,500
-                </td>
-                <td class="goodStatus">
-                    +156.48%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Amazon
-                </td>
-                <td>
-                    AMZN
-                </td>
-                <td>
-                    NASDAQ
-                </td>
-                <td>
-                    Technology
-                </td>
-                <td>
-                    100
-                </td>
-                <td>
+                <td class="hidden-md-down">
                     $54,000
                 </td>
                 <td>
@@ -301,15 +185,10 @@
                 lineTension: 0.4,
                 backgroundColor: "rgba(23,61,74,0.5)",
                 borderColor: "rgba(0,156,181,1)",
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBackgroundColor: "#fff",
                 pointBorderWidth: 3,
                 pointHoverRadius: 5,
                 pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderColor: "rgba(220,220,220,0)",
                 pointHoverBorderWidth: 4,
                 pointRadius: 2,
                 pointHitRadius: 10,
