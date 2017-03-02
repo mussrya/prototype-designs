@@ -1,4 +1,4 @@
-html, body{
+html, body {
     font-family: Lato, Helvetica, Arial;
 }
 
@@ -19,6 +19,15 @@ html, body{
     --light-grey: #f0f0f0;
 }
 
+a{
+    color: var(--text-white);
+}
+
+a:hover{
+    color: var(--text-blue);
+    text-decoration: none;
+}
+
 .noPadding {
     padding: 0;
 }
@@ -30,15 +39,15 @@ html, body{
     padding-top: 40px;
 }
 
-.header .img-fluid{
-    max-height:65px;
+.header .img-fluid {
+    max-height: 65px;
 }
 
-.fa-line-chart{
+.fa-line-chart {
     font-size: 50px;
 }
 
-.blueHeaderBorder{
+.blueHeaderBorder {
     border-left: 1px solid var(--blue-border);
 }
 
@@ -51,15 +60,15 @@ html, body{
     padding: 14px 15px;
 }
 
-.blueBorder{
+.blueBorder {
     border: 2px solid var(--blue-border);
 }
 
-.lightGreyBorder{
+.lightGreyBorder {
     border: 2px solid var(--light-grey);
 }
 
-.darkBlueBackground{
+.darkBlueBackground {
     background-color: var(--dark-blue);
 }
 
@@ -97,13 +106,13 @@ html, body{
 
 .chartPlaceholder {
     width: 130%;
-    overflow:hidden;
+    overflow: hidden;
     padding: 40px 0 20px 0;
     background: var(--dark-blue);
     margin: 0 -90px;
 }
 
-.chartText{
+.chartText {
     padding-top: 40px;
 }
 
@@ -122,31 +131,31 @@ html, body{
     margin-left: 25px;
 }
 
-.marginTop25{
+.marginTop25 {
     margin-top: 25px;
 }
 
-.marginTop15{
+.marginTop15 {
     margin-top: 15px;
 }
 
-.marginTop10{
+.marginTop10 {
     margin-top: 10px;
 }
 
-.marginTop5{
+.marginTop5 {
     margin-top: 5px;
 }
 
-.marginLeft10{
+.marginLeft10 {
     margin-left: 10px;
 }
 
-.tableHeader .fa{
+.tableHeader .fa {
     color: var(--white-accent);
 }
 
-.customIndent{
+.customIndent {
     padding: 0 20px;
 }
 
@@ -154,79 +163,106 @@ html, body{
     display: table;
 }
 
-.goodStatus{
+.goodStatus {
     color: var(--text-green);
 }
 
-.badStatus{
+.badStatus {
     color: var(--text-red);
 }
 
-.table{
+.table {
     font-size: 13px;
 }
 
-.table thead th{
-    font-weight: bold!important;
+.table thead th {
+    font-weight: bold !important;
     text-transform: uppercase;
     color: var(--text-header);
     letter-spacing: 1.5px;
     font-size: 12px;
 }
 
-.searchBox .fa{
+.searchBox .fa {
     position: absolute;
     margin: 4px 0 0 3px;
 }
 
-input:focus{
-    outline:0!important;
+input:focus {
+    outline: 0 !important;
 }
 
-.lightGreyBorder:hover{
+.lightGreyBorder:hover {
     background-color: var(--text-header);
     color: var(--text-white);
-    cursor:pointer;
+    cursor: pointer;
     transition: ease-in all 0.1s;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
+    user-select: none;
 }
 
-.whiteText{
+.whiteText {
     color: var(--text-white);
 }
 
-.smallerFont{
+.smallerFont {
     font-size: 11px;
     vertical-align: middle;
 }
 
-@media only screen and (max-width: 1015px){
-    .fa-line-chart{
+.dropdown {
+    display: none;
+    width: 80%;
+    background: var(--darkest-blue);
+    position: absolute;
+    z-index: 10;
+    border: 1px solid #343b45;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(24, 47, 59);
+    -moz-box-shadow: 0px 0px 10px 0px rgb(24, 47, 59);
+    box-shadow: 0px 0px 10px 0px rgb(24, 47, 59);
+}
+
+.dropdown > ul {
+    list-style: none;
+    padding: 10px 10px 0 10px;
+}
+
+.dropdown > ul > li:not(:last-child) {
+    border-bottom: 1px solid var(--blue-border);
+    padding: 10px 0;
+}
+
+.dropdown > ul > li:not(:first-child) {
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 1015px) {
+    .fa-line-chart {
         font-size: 36px;
         margin-top: 5px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .table thead th{
-        font-size: 10px!important;
+    .table thead th {
+        font-size: 10px !important;
         text-indent: 0;
         text-align: center;
     }
 
-    .searchBox{
-        width:100%!important;
-        margin-left: 0!important;
+    .searchBox {
+        width: 100% !important;
+        margin-left: 0 !important;
     }
 
-    .chartPlaceholder{
+    .chartPlaceholder {
         padding: 20px 0;
     }
 
-    .chartText{
+    .chartText {
         padding-top: 20px;
     }
 }
