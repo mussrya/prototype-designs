@@ -1,0 +1,108 @@
+html, body {
+    font-family: Lato, Helvetica, Arial;
+}
+
+:root {
+    --light-purple: #454389;
+    --accent-purple: #7673c0;
+    --dark-purple: #5454fb;
+    --darkest-purple: #343268;
+    --mid-grey: #f3f3f8;
+    --dark-grey: #ccccd9;
+    --grey-accent: #9098b1;
+    --white: #ffffff;
+    --red: #ff3463;
+    --green: #5ac489;
+    --yellow: #ffc400;
+}
+
+a {
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.padding15 {
+    padding: 8px;
+}
+
+.marginTop25 {
+    margin-top: 25px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+}
+
+.customIndent {
+    padding: 0 20px;
+}
+
+.menu {
+    height: 100vh;
+    background-color: var(--darkest-purple);
+}
+
+.menu > ul {
+    list-style: none;
+    padding: 40px 0;
+}
+
+.menu > ul > li {
+    padding: 15px;
+    font-size: 14px;
+    transition: all ease-in 0.1s;
+}
+
+.menu > ul > li .fa {
+    padding: 0 25px 0 20px;
+    font-size: 18px;
+}
+
+.menu > ul > li.active, .menu > ul > li:hover {
+    background-color: var(--light-purple);
+}
+
+.menu > ul > li > a {
+    display: block;
+    width: 100%;
+    color: var(--accent-purple);
+}
+
+.menu > ul > li.active > a, .menu > ul > li:hover > a{
+    color: var(--white);
+}
+
+.topLogo {
+    background-color: var(--dark-purple);
+    padding: 20px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    background-image: -webkit-linear-gradient(top, #5A5AFB 0%, #4d4dfa 100%);
+}
+
+.topLogo h3{
+    margin: 0;
+}
+
+.textWhite {
+    color: var(--white);
+}

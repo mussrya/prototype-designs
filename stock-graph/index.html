@@ -1,12 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stock Graph Prototype</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A stock graph prototype design">
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ryan.musselwhite">
+    <meta name="twitter:title" content="A stock graph prototype design">
+    <meta name="twitter:description" content="A prototype design relating to a stock portfolio">
+    <meta name="twitter:image" content="http://ryan-musselwhite.com/prototype-designs/stock-graph/twitter.png">
+
+    <title>Stock Graph Prototype Design</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../libraries/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="favicon-line-chart.ico"/>
 </head>
 <body>
+<div class="container-fluid">
+    <div class="header row">
+        <div class="col-2 col-md-1">
+            <i class="fa fa-line-chart blueText pull-right" aria-hidden="true"></i>
+        </div>
+        <div class="col-5 col-md-5">
+            <div class="row">
+                <div class="col-2 hidden-md-down col-md-2">
+                    <i class="fa fa-file-text-o blueBorder circleBorder pull-right" aria-hidden="true"></i>
+                </div>
+                <div class="col-11 col-md-8 pointer" id="stocks">
+                    <h4 class="unBold paddingtop10">
+                        All Stocks
+                        <i class="fa fa-chevron-down pull-right resetFont paddingtop10"></i>
+                    </h4>
+                </div>
+            </div>
+            <div id="dropdownStocks" class="dropdown marginTop10">
+                <ul>
+                    <li><a href="#">All Stocks</a></li>
+                    <li><a href="#">FTSE 100</a></li>
+                    <li><a href="#">NASDAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-5 col-md-6">
+            <div class="row">
+                <div class="col-3 col-md-4 col-lg-3 hidden-md-down blueHeaderBorder text-center">
+                    <h6 class="mutedHeader">
+                        MARKET VALUE
+                    </h6>
+                    <h4>
+                        $122,500
+                    </h4>
+                </div>
+                <div class="col-3 col-lg-3 hidden-md-down blueHeaderBorder text-center">
+                    <h6 class="mutedHeader">
+                        EXPENDITURE
+                    </h6>
+                    <h4>
+                        $71,500
+                    </h4>
+                </div>
+                <div class="col-3 col-lg-2 hidden-md-down blueHeaderBorder text-center">
+                    <h6 class="mutedHeader">
+                        QUANTITY
+                    </h6>
+                    <h4>
+                        350
+                    </h4>
+                </div>
+                <div class="col-12 col-md-7 col-lg-4">
+                    <div class="row pointer" id="profile">
+                        <div class="col-5 col-sm-4 col-md-5 col-lg-4">
+                            <img class="img-fluid borderRadius pull-right"
+                                 src="http://ryan-musselwhite.com/reus/themes/purple/images/team/profile3.jpg">
+                        </div>
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-7 noPadding">
+                            <p class="paddingtop15">
+                                Hi, Jess
+                                <i class="fa fa-chevron-down resetFont paddingLeft10"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="dropdownProfile" class="dropdown">
+                        <ul>
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row darkBlueBackground" style="overflow:hidden;">
+        <div class="text-center col-12 chartText">
+            <h5 class="mutedHeader">TODAY'S MARKET VALUE</h5>
+            <h2 class="whiteText marginTop15">
+                $122,500
+                <span class="smallerFont goodStatus"><i class="fa fa-angle-up"></i> 58.36%</span>
+            </h2>
+        </div>
+        <div class="chartPlaceholder">
+            <canvas id="chart" width="400" height="78"></canvas>
+        </div>
+    </div>
+    <div class="row customIndent tableHeader">
+        <div class="col-12 col-sm-3 col-md-4">
+            <h4 class="pull-left blueText marginTop25 unBold">Current</h4>
+        </div>
+        <div class="marginTop10 col-12 col-sm-9 col-md-8 noPadding">
+            <div class="row">
+                <div class="col-4 col-sm-6 col-md-7 col-lg-8 noPadding">
+                    <i class="fa fa-upload lightGreyBorder circleBorder pull-right"></i>
+                    <i class="fa fa-plus lightGreyBorder circleBorder pull-right"></i>
+                </div>
+                <div class="col-8 col-sm-5 col-md-5 col-lg-4">
+                    <div class="searchBox">
+                        <i class="fa fa-search absolute"></i>
+                        <input type="text" placeholder="Search..."/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row marginTop25">
+        <table class="table table-responsive table-striped">
+            <thead style="text-indent: 20px;">
+            <tr>
+                <th>
+                    Stock Name
+                </th>
+                <th class="hidden-md-down">
+                    Stock Code
+                </th>
+                <th>
+                    Market
+                </th>
+                <th class="hidden-md-down">
+                    Sector
+                </th>
+                <th class="hidden-md-down">
+                    QTY
+                </th>
+                <th class="hidden-md-down">
+                    Original Buy-in Amount
+                </th>
+                <th>
+                    Current Value
+                </th>
+                <th>
+                    Profit / Loss
+                </th>
+            </tr>
+            </thead>
+            <tbody style="text-indent: 20px;">
+            <tr>
+                <td>
+                    Amazon
+                </td>
+                <td class="hidden-md-down">
+                    AMZN
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td class="hidden-md-down">
+                    Technology
+                </td>
+                <td class="hidden-md-down">
+                    100
+                </td>
+                <td class="hidden-md-down">
+                    $54,000
+                </td>
+                <td>
+                    $84,500
+                </td>
+                <td class="goodStatus">
+                    +156.48%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Apple
+                </td>
+                <td class="hidden-md-down">
+                    APPL
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td class="hidden-md-down">
+                    Technology
+                </td>
+                <td class="hidden-md-down">
+                    200
+                </td>
+                <td class="hidden-md-down">
+                    $14,000
+                </td>
+                <td>
+                    $34,500
+                </td>
+                <td class="goodStatus">
+                    +40.56%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PayPal
+                </td>
+                <td class="hidden-md-down">
+                    PYPL
+                </td>
+                <td>
+                    NASDAQ
+                </td>
+                <td class="hidden-md-down">
+                    Technology
+                </td>
+                <td class="hidden-md-down">
+                    50
+                </td>
+                <td class="hidden-md-down">
+                    $4,000
+                </td>
+                <td>
+                    $3,500
+                </td>
+                <td class="badStatus">
+                    -12.5%
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type="text/javascript">
+
+    var ctx = document.getElementById("chart");
+
+    var data = {
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC", "JAN", "FEB"],
+        datasets: [
+            {
+                label: "Value",
+                fill: true,
+                lineTension: 0.4,
+                backgroundColor: "rgba(23,61,74,0.5)",
+                borderColor: "rgba(0,156,181,1)",
+                pointBorderWidth: 3,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,0)",
+                pointHoverBorderWidth: 4,
+                pointRadius: 2,
+                pointHitRadius: 10,
+                data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+                spanGaps: false
+            }
+        ]
+    };
+    var myLineChart = new Chart(
+        ctx, {
+            type: 'line',
+            data: data,
+            responsive: true,
+            maintainAspectRatio: false,
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            ticks: {
+                                padding: 30,
+                                fontStyle: 'bold',
+                                fontFamily: 'Lato, Helvetica',
+                                labelOffet: 10,
+                                fontColor: '#9ba0a6'
+                            },
+                            gridLines: {
+                                display: true,
+                                color: "rgba(155, 160, 166, 0.1)",
+                                tickMarkLength: 15
+                            }
+                        }
+                    ],
+                    yAxes: [
+                        {
+                            display: false,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    );
+
+    document.getElementById('profile').addEventListener(
+        'click', function ()
+        {
+            document.getElementById('dropdownProfile').style.display =
+                (document.getElementById('dropdownProfile').style.display === 'block') ? 'none' : 'block';
+            document.getElementById('dropdownStocks').style.display = 'none';
+        }
+    );
+
+    document.getElementById('stocks').addEventListener(
+        'click', function ()
+        {
+            document.getElementById('dropdownStocks').style.display =
+                (document.getElementById('dropdownStocks').style.display === 'block') ? 'none' : 'block';
+            document.getElementById('dropdownProfile').style.display = 'none';
+        }
+    );
+
+</script>
 </body>
 </html>
