@@ -57,6 +57,10 @@ a:hover {
     padding: 0 20px;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 .menu {
     height: 100vh;
     background-color: var(--darkest-purple);
@@ -70,7 +74,6 @@ a:hover {
 .menu > ul > li {
     padding: 15px;
     font-size: 14px;
-    transition: all ease-in 0.1s;
 }
 
 .menu > ul > li .fa {
@@ -105,4 +108,103 @@ a:hover {
 
 .textWhite {
     color: var(--white);
+}
+
+.notification{
+    background-color: var(--red)!important;
+    font-size: 10px;
+    padding: 1px 6px;
+    margin-top: 1px;
+    border-radius: 2px;
+}
+
+.searchBox{
+    background-color: var(--mid-grey);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,0.35);
+    box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,0.35);
+    height: auto;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+.search{
+    background: none;
+    width: 100%;
+    border: 0;
+    font-size: 14px;
+    padding-left: 35px;
+    color: var(--grey-accent);
+    outline: 0;
+}
+
+.searchBox .fa{
+    position: absolute;
+    padding: 4px 8px;
+    color: var(--grey-accent);
+}
+
+.shadowBottom{
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(144,152,177,0.37);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(144,152,177,0.37);
+    box-shadow: 0px 4px 5px 0px rgba(144,152,177,0.37);
+    padding-bottom: 15px;
+}
+
+.smallNotification{
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--red);
+    width: 14px;
+    text-align: center;
+    border-radius: 2px;
+    position: absolute;
+    left: 8px;
+    top: -2px;
+}
+
+.fa-bell, .fa-comment{
+    color: var(--grey-accent);
+    font-size: 18px;
+}
+
+.topNotification{
+    margin: 6px 10px 0 10px;
+    position: relative;
+}
+
+.avatarImage{
+    max-height: 36px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.username{
+    font-size: 13px;
+    margin: 0 5px;
+    color: var(--grey-accent);
+}
+
+.fa-chevron-down{
+    font-size: 12px;
+    color: var(--grey-accent);
+}
+
+.textAccent{
+    color: var(--grey-accent);
+}
+
+.btn{
+    font-size: 13px;
+}
+
+.btnPurple{
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.btnPurple .fa{
+    margin-left: 10px;
 }
