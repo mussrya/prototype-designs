@@ -32,7 +32,8 @@
                     <a href="#"><i class="fa fa-circle-o"></i> Dashboard</a>
                 </li>
                 <li class="active">
-                    <a href="#"><i class="fa fa-envelope-o"></i> Inbox <span class="notification pull-right">2</span></a>
+                    <a href="#"><i class="fa fa-envelope-o"></i> Inbox <span
+                            class="notification pull-right">2</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-user-o"></i> Find People</a>
@@ -84,7 +85,7 @@
                 <div class="col-sm-6 messagesList backgroundMidGrey">
                     <div class="row messageBar unread">
                         <div class="col-4 noPadding">
-                            <img src="lady1.jpg" class="avatarImage--Large pointer"/>
+                            <img src="2.jpg" class="avatarImage--Large pointer"/>
                             <div class="pull-right">
                                 <p class="titleText">
                                     Cody Benson
@@ -111,7 +112,7 @@
                     </div>
                     <div class="row messageBar">
                         <div class="col-4 noPadding">
-                            <img src="lady1.jpg" class="avatarImage--Large pointer"/>
+                            <img src="3.jpg" class="avatarImage--Large pointer"/>
                             <div class="pull-right">
                                 <p class="titleText">
                                     Cody Benson
@@ -138,7 +139,7 @@
                     </div>
                     <div class="row messageBar active">
                         <div class="col-4 noPadding">
-                            <img src="lady1.jpg" class="avatarImage--Large pointer"/>
+                            <img src="4.jpg" class="avatarImage--Large pointer"/>
                             <div class="pull-right">
                                 <p class="titleText">
                                     Cody Benson
@@ -165,7 +166,7 @@
                     </div>
                     <div class="row messageBar">
                         <div class="col-4 noPadding">
-                            <img src="lady1.jpg" class="avatarImage--Large pointer"/>
+                            <img src="5.jpg" class="avatarImage--Large pointer"/>
                             <div class="pull-right">
                                 <p class="titleText">
                                     Cody Benson
@@ -192,7 +193,7 @@
                     </div>
                     <div class="row messageBar unread">
                         <div class="col-4 noPadding">
-                            <img src="lady1.jpg" class="avatarImage--Large pointer"/>
+                            <img src="6.jpg" class="avatarImage--Large pointer"/>
                             <div class="pull-right">
                                 <p class="titleText">
                                     Cody Benson
@@ -227,12 +228,51 @@
 </div>
 
 <script type="text/javascript">
-    /*document.getElementById('').addEventListener(
-        'click', function ()
+    var verticalMenus = document.getElementsByClassName("verticalMenu");
+    Array.from(verticalMenus).forEach(
+        function (element)
         {
+            element.addEventListener(
+                'click', function (e)
+                {
 
+                    var openDropdown = document.getElementById('popup');
+                    if (openDropdown) {
+                        openDropdown.outerHTML = '';
+                    }
+
+                    var dropdown = document.createElement('div');
+                    dropdown.className += 'popupEdit';
+                    dropdown.id += 'popup';
+                    dropdown.innerHTML = 'a';
+                    element.parentNode.parentNode.parentNode.insertBefore(
+                        dropdown, element.parentNode.parentNode.nextSibling
+                    );
+                }
+            );
         }
-    );*/
+    );
+
+    document.addEventListener(
+        'click', function (event)
+        {
+            var dropdownCheck = true;
+            if (event.target.className == "verticalMenu pull-right") {
+                dropdownCheck = false;
+            }
+
+            if (dropdownCheck) {
+                var openDropdown = document.getElementById('popup');
+                if (openDropdown) {
+                    var isClickInside = openDropdown.contains(event.target);
+                    if (!isClickInside) {
+                        openDropdown.outerHTML = '';
+                    }
+                }
+            }
+        }
+    );
+
 </script>
 </body>
 </html>
