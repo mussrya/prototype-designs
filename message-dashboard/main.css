@@ -99,6 +99,10 @@ a:hover {
     background-color: var(--light-purple);
 }
 
+.active > .col-6 > p.titleText{
+    color: var(--dark-purple);
+}
+
 .menu > ul > li > a {
     display: block;
     width: 100%;
@@ -147,9 +151,9 @@ a:hover {
 .searchBox {
     background-color: var(--mid-grey);
     border-radius: 3px;
-    -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.35);
-    box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     height: auto;
     width: 100%;
     padding: 6px 10px;
@@ -529,6 +533,10 @@ a:hover {
     margin: 3px 10px 10px 20px;
 }
 
+.status{
+    margin: 7px;
+}
+
 .metadata {
     font-size: 12px;
     color: var(--grey-accent);
@@ -558,4 +566,71 @@ a:hover {
     -moz-box-shadow: 0px 0px 8px 0px rgba(148, 148, 148, 1);
     box-shadow: 0px 0px 8px 0px rgba(148, 148, 148, 1);
     margin: -30px -20px 0 0;
+}
+
+.metaFrom{
+    color: var(--grey-accent);
+    font-size: 0.8rem;
+}
+
+.message{
+    margin: 20px 0 0 0;
+}
+
+.bubble{
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--white);
+    display: inline-block;
+    position: relative;
+    font-size: 0.9rem;
+    max-width: 100%;
+}
+
+.bubblePurple{
+    background-color: var(--dark-purple);
+}
+
+.bubbleWhite{
+    background-color: var(--grey-accent);
+}
+
+.bubble:after{
+    left: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(84, 84, 251, 0);
+    border-left-color: #5454fb;
+    border-width: 5px;
+    margin-top: -7px;
+}
+
+.time{
+    display: block;
+    font-size: 0.7rem;
+    color: var(--light-grey);
+    margin-top: 10px;
+}
+
+.selectStatus{
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--mid-grey);
+    width: 150px;
+    -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+select{
+    background: none;
+    border: 0;
+    font-size: 0.9rem;
+    width: 110px;
 }
