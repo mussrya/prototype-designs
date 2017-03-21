@@ -23,7 +23,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-2 menu noPadding" id="sideMenu">
+        <div class="hidden-sm-down col-md-4 col-lg-2 menu noPadding" id="sideMenu">
             <div class="topLogo">
                 <h3 class="textWhite">MsgDash</h3>
             </div>
@@ -46,7 +46,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-sm-8 col-md-8 col-lg-10 flexColumn">
+        <div class="col-sm-12 col-md-8 col-lg-10 flexColumn">
             <div class="row paddingTop15 backgroundWhite shadowBottom zIndex2">
                 <div class="col-6 col-sm-6">
                     <div class="searchBox">
@@ -72,8 +72,17 @@
             </div>
             <div class="row paddingTop25 backgroundWhite shadowBottom zIndex1">
                 <div class="col-6 col-sm-6">
-                    <h5>All Messages <span class="textAccent pointer">(100)</span>
-                        <i class="fa fa-chevron-down textAccent pointer"></i></h5>
+                    <div class="hidden-md-up navbar-light">
+                        <button class="navbar-toggler pull-left pointer" type="button" data-toggle="collapse"
+                                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <h5 class="topMenu">All Messages
+                        <span class="hidden-sm-down textAccent pointer">(100)</span>
+                        <i class="hidden-sm-down fa fa-chevron-down textAccent pointer"></i>
+                    </h5>
                 </div>
                 <div class="col-6 col-sm-6">
                     <button class="btn btnPurple pull-right pointer">
@@ -244,11 +253,67 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="message pull-right">
-                                <img class="avatarImage pull-right" src="lady1.jpg"/>
-                                <span class="bubble bubblePurple pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
                                     Hi Cody nice to meet you!
                                     <span class="time">
                                         11:43 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    Hi Maddie, nice to meet you too! How are you?
+                                    <span class="time">
+                                        11:43 AM
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
+                                    I am really well thanks, how about you?
+                                    <span class="time">
+                                        11:43 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    I'm not too bad thanks.
+                                    <span class="time">
+                                        11:44 AM
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
+                                    I have a very interesting job prospect you might be interested in, it relates to
+                                    front-end design.
+                                    <span class="time">
+                                        11:44 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    That sounds interesting, could you send me over the information?
+                                    <span class="time">
+                                        11:45 AM
                                     </span>
                                 </span>
                             </div>
@@ -260,52 +325,5 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    var verticalMenus = document.getElementsByClassName("verticalMenu");
-    Array.from(verticalMenus).forEach(
-        function (element)
-        {
-            element.addEventListener(
-                'click', function (e)
-                {
-
-                    var openDropdown = document.getElementById('popup');
-                    if (openDropdown) {
-                        openDropdown.outerHTML = '';
-                    }
-
-                    var dropdown = document.createElement('div');
-                    dropdown.className += 'popupEdit';
-                    dropdown.id += 'popup';
-                    dropdown.innerHTML = 'a';
-                    element.parentNode.parentNode.parentNode.insertBefore(
-                        dropdown, element.parentNode.parentNode.nextSibling
-                    );
-                }
-            );
-        }
-    );
-
-    document.addEventListener(
-        'click', function (event)
-        {
-            var dropdownCheck = true;
-            if (event.target.className == "verticalMenu pull-right") {
-                dropdownCheck = false;
-            }
-
-            if (dropdownCheck) {
-                var openDropdown = document.getElementById('popup');
-                if (openDropdown) {
-                    var isClickInside = openDropdown.contains(event.target);
-                    if (!isClickInside) {
-                        openDropdown.outerHTML = '';
-                    }
-                }
-            }
-        }
-    );
-
-</script>
 </body>
 </html>

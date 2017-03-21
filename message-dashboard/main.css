@@ -76,8 +76,8 @@ a:hover {
 }
 
 .menu {
-    height: 100vh;
     background-color: var(--darkest-purple);
+    min-height: 100vh;
 }
 
 .menu > ul {
@@ -122,6 +122,11 @@ a:hover {
 
 .topLogo h3 {
     margin: 0;
+}
+
+.username {
+    font-size: 14px;
+    color: var(--grey-accent);
 }
 
 .backgroundWhite {
@@ -411,6 +416,10 @@ a:hover {
     margin-left: 20px;
 }
 
+.avatarImage--Left {
+    margin: 0 20px 0 0;
+}
+
 .avatarImage--Large {
     max-height: 46px;
     border-radius: 50%;
@@ -555,47 +564,39 @@ a:hover {
     background-color: var(--yellow);
 }
 
-.popupEdit{
-    position: absolute;
-    z-index: 1;
-    background: #FFF;
-    width: 150px;
-    height: 80px;
-    right: 0;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(148, 148, 148, 1);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(148, 148, 148, 1);
-    box-shadow: 0px 0px 8px 0px rgba(148, 148, 148, 1);
-    margin: -30px -20px 0 0;
-}
-
 .metaFrom{
     color: var(--grey-accent);
     font-size: 0.8rem;
 }
 
 .message{
-    margin: 20px 0 0 0;
+    margin: 20px 0 15px 0;
+    max-width: 80%;
+    display: flex;
 }
 
 .bubble{
     padding: 15px;
     border-radius: 5px;
-    color: var(--white);
     display: inline-block;
     position: relative;
     font-size: 0.9rem;
-    max-width: 100%;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(204, 204, 204, 1);
+    box-shadow: 0px 0px 8px 0px rgba(204, 204, 204, 1);
 }
 
 .bubblePurple{
     background-color: var(--dark-purple);
+    color: var(--white);
 }
 
 .bubbleWhite{
-    background-color: var(--grey-accent);
+    background-color: var(--white);
+    color: var(--grey-accent);
 }
 
-.bubble:after{
+.bubbleRight:after {
     left: 100%;
     top: 20px;
     border: solid transparent;
@@ -610,11 +611,26 @@ a:hover {
     margin-top: -7px;
 }
 
+.bubbleLeft:after {
+    right: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 5px;
+    margin-top: -7px;
+}
+
 .time{
     display: block;
     font-size: 0.7rem;
-    color: var(--light-grey);
     margin-top: 10px;
+    opacity: 0.6;
 }
 
 .selectStatus{
@@ -628,9 +644,25 @@ a:hover {
     box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
+.singleMessage {
+    padding-bottom: 20px;
+}
+
 select{
     background: none;
     border: 0;
     font-size: 0.9rem;
     width: 110px;
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin-right: 0.4rem;
+}
+
+@media only screen and (max-width: 767px) {
+    h5.topMenu {
+        padding: 0.6rem 0;
+    }
 }
