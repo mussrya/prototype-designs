@@ -1,0 +1,77 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #ebeff1;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop40 {
+    margin-top: 40px;
+}
+
+.redBar {
+    border-top: 5px solid #f44336;
+}
+
+.greenBar {
+    border-top: 5px solid #8bc34a;
+}
+
+.navbar {
+    background-color: #2196f3;
+}
+
+.card {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    margin: 10px 0;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    background: #fff;
+}
+
+.card--minHeight {
+    height: 380px;
+    overflow: scroll;
+}
+
+.card p.smaller {
+    padding-bottom: 15px;
+    margin: 15px 0 0 0;
+}
+
+.card .row:not(:last-child) p.smaller {
+    border-bottom: 1px solid #efefef;
+}
+
+p.smaller {
+    font-size: 80%;
+}
+
+.strongA {
+    font-weight: bold;
+    color: #607d8b;
+}
+
+.table-responsive {
+    display: table;
+}
+
+.card--padding {
+    padding: 20px;
+}
+
+.blueBg {
+    background-color: #3F51B5;
+    color: #FFFFFF;
+}
+
+.table {
+    font-size: 14px;
+}
