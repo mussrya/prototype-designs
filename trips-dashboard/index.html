@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trips dashboard design">
+    <meta name="description" content="Trips Dashboard Design">
     <meta name="robots" content="index,follow,noodp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ryan.musselwhite">
-    <meta name="twitter:title" content="Trips dashboard design">
-    <meta name="twitter:description" content="A trips dashboard design">
+    <meta name="twitter:title" content="Trips Dashboard Design">
+    <meta name="twitter:description" content="An example of a trips dashboard">
     <meta name="twitter:image" content="https://ryanmusselwhite.com/prototype-designs/trips-dashboard/twitter.png">
 
-    <meta property="og:title" content="Trips dashboard design"/>
-    <meta property="og:description" content="A trips dashboard design"/>
+    <meta property="og:title" content="Trips Dashboard Design"/>
+    <meta property="og:description" content="An example of a trips dashboard"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://ryanmusselwhite.com/prototype-designs/trips-dashboard"/>
     <meta property="og:image" content="https://ryanmusselwhite.com/prototype-designs/trips-dashboard/twitter.png"/>
@@ -29,24 +29,25 @@
 <body>
 <div class="container-fluid">
     <div class="row topMenu">
-        <ul class="col-6">
+        <ul class="col-4 col-md-7">
             <li><i class="fa fa-globe" aria-hidden="true"></i> Trips</li>
-            <li>CALENDAR</li>
-            <li>FRIENDS</li>
-            <li>POPULAR</li>
-            <li class="active">STORIES</li>
+            <li class="hidden-sm-down">CALENDAR</li>
+            <li class="hidden-sm-down">FRIENDS</li>
+            <li class="hidden-sm-down">POPULAR</li>
+            <li class="active hidden-sm-down">STORIES</li>
         </ul>
-        <div class="rightSection col-6">
+        <div class="rightSection col-8 col-md-5">
             <div class="row">
-                <div class="col-6">
+                <div class="col-sm-12 col-md-6">
                     <div class="pull-right topMargin8">
+                        <div class="navbar-light hidden-md-up"><span class="navbar-toggler-icon"></span></div>
                         <div class="notifications">
                             8
                         </div>
                         <i class="fa fa-bell-o"></i>
                     </div>
                 </div>
-                <div class="search col-6">
+                <div class="search col-sm-6 col-md-6 hidden-sm-down">
                     <i class="fa fa-search"></i>
                     <input placeholder="Search"/>
                 </div>
@@ -54,7 +55,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="leftBar col-1">
+        <div class="leftBar hidden-sm-down col-md-1">
             <ul>
                 <li>
                     <img src="profile.jpg" class="rounded-circle"/>
@@ -81,15 +82,15 @@
                 </li>
             </ul>
         </div>
-        <div class="col-9 middleContent">
+        <div class="col-sm-12 col-md-9 middleContent">
             <div class="row">
-                <h5 class="topTitle col-9">
+                <h5 class="topTitle col-sm-6 col-md-9">
                     Popular Stories
                 </h5>
-                <div class="pull-right filter col-3">
+                <div class="filter col-sm-6 col-md-3">
                     PAST 24 HOURS <i class="fa fa-chevron-down"></i>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             FRANCE
@@ -109,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             SCOTLAND
@@ -129,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             ENGLAND
@@ -149,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             USA
@@ -169,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             ICELAND
@@ -189,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <div class="cardLabel">
                             USA
@@ -212,15 +213,14 @@
             </div>
 
         </div>
-        <div class="col-2 rightBar">
+        <div class="hidden-sm-down col-md-2 rightBar">
             <div class="profileShare">
                 <img class="rounded-circle" src="prof5.jpg"/>
                 <span>Holly</span> invited you to a trip
             </div>
             <br/>
-            <iframe src="https://snazzymaps.com/embed/36975" width="210px" height="165px"
-                    class="mapClip" style="border:none;">
-            </iframe>
+            <iframe class="mapClip" src="https://snazzymaps.com/embed/36975" width="100%" height="155px"
+                    style="border:none;"></iframe>
             <h5 class="mapHeading">NY City</h5>
             <p class="smaller">
                 A great stop to sightsee, shop and take in the culture of a city which really does never sleep.
@@ -237,7 +237,7 @@
             </div>
             <p class="titleBox topMargin8">
                 <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                WHOS GOING
+                GOING
                 <span class="pull-right number">8</span></p>
             <div class="whosGoing row">
                 <img class="rounded-circle col-2" src="prof2.jpg"/>
@@ -269,10 +269,16 @@
             </div>
             <div class="row btnGroup">
                 <div class="col-6">
-                    <button class="btn btn-outline-success">APPLY</button>
+                    <button class="btn btn-outline-success">
+                        <span class="hidden-md-down">APPLY</span>
+                        <i class="fa fa-check hidden-lg-up"></i>
+                    </button>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-outline-secondary">DISCARD</button>
+                    <button class="btn btn-outline-secondary">
+                        <span class="hidden-md-down">DISCARD</span>
+                        <i class="fa fa-times hidden-lg-up"></i>
+                    </button>
                 </div>
             </div>
         </div>

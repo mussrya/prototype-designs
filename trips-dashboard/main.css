@@ -45,6 +45,11 @@ html, body {
     margin-right: 5px;
 }
 
+.navbar-light {
+    display: inline-block;
+}
+
+
 .notifications {
     padding: 1px 2px 2px 2px;
     text-align: center;
@@ -363,16 +368,27 @@ html, body {
 }
 
 @media only screen and (max-width: 1015px) {
-    .leftBar ul li {
-        padding: 15px 0;
+    .middleContent h5.topTitle, .filter {
+        margin: 0;
     }
 
-    .leftBar ul li img {
-        height: 25px;
-        width: 25px;
+    .times h5 {
+        font-size: 12px;
     }
 
-    .leftBar ul li span {
-        display: none;
+    .times span {
+        font-size: 8px;
+    }
+
+    .times .col-6 {
+        padding: 10px;
+    }
+
+    .btnGroup .btn {
+        padding: 5px 8px;
+    }
+
+    .card {
+        margin: 20px 0 20px 0;
     }
 }
