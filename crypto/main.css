@@ -1,7 +1,18 @@
+:root {
+    --orange: #f44336;
+    --green: #8bc34a;
+    --blue: #2196f3;
+    --white: #fff;
+    --light-white: #efefef;
+    --blue-grey: #607d8b;
+    --purple: #3F51B5;
+    --grey: #ebeff1;
+}
+
 html, body {
     padding: 0;
     margin: 0;
-    background-color: #ebeff1;
+    background-color: var(--grey);
 }
 
 .marginTop20 {
@@ -13,15 +24,15 @@ html, body {
 }
 
 .redBar {
-    border-top: 5px solid #f44336;
+    border-top: 5px solid var(--orange);
 }
 
 .greenBar {
-    border-top: 5px solid #8bc34a;
+    border-top: 5px solid var(--green);
 }
 
 .navbar {
-    background-color: #2196f3;
+    background-color: var(--blue);
 }
 
 .card {
@@ -33,7 +44,7 @@ html, body {
     position: relative;
     -webkit-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
-    background: #fff;
+    background: var(--white);
 }
 
 .card--minHeight {
@@ -47,7 +58,7 @@ html, body {
 }
 
 .card .row:not(:last-child) p.smaller {
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid var(--light-white);
 }
 
 p.smaller {
@@ -56,7 +67,7 @@ p.smaller {
 
 .strongA {
     font-weight: bold;
-    color: #607d8b;
+    color: var(--blue-grey);
 }
 
 .table-responsive {
@@ -68,8 +79,8 @@ p.smaller {
 }
 
 .blueBg {
-    background-color: #3F51B5;
-    color: #FFFFFF;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .table {
