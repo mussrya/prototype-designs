@@ -38,12 +38,14 @@ html, body {
     background: linear-gradient(to bottom, var(--light-green), var(--dark-green)); /*Standard*/
 }
 
-.redBackground {
+.mainBackground {
     background: var(--light-purple); /* Old Browsers */
     background: -webkit-linear-gradient(top, var(--light-purple), var(--light-orange)); /*Safari 5.1-6*/
     background: -o-linear-gradient(top, var(--light-purple), var(--light-orange)); /*Opera 11.1-12*/
     background: -moz-linear-gradient(top, var(--light-purple), var(--light-orange)); /*Fx 3.6-15*/
     background: linear-gradient(to bottom, var(--light-purple), var(--light-orange)); /*Standard*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .blueBackground {
@@ -113,7 +115,7 @@ html, body {
 }
 
 .formLogin {
-    padding: 30px;
+    padding: 30px 50px;
 }
 
 .formLogin h5 {
@@ -136,7 +138,14 @@ html, body {
     padding-top: 15px;
 }
 
-input {
+.formContainer .btn-primary {
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 7px 30px;
+    cursor: pointer;
+}
+
+.formContainer input {
     background: none;
     border: none;
     border-bottom: 1px solid var(--grey);
@@ -147,7 +156,11 @@ input {
     color: var(--light-white)
 }
 
-label {
+.formContainer input:focus {
+    border-color: var(--green);
+}
+
+.formContainer label {
     display: block;
     font-size: 12px;
     padding: 0 0 5px 0;
@@ -155,7 +168,7 @@ label {
     opacity: 0.8;
 }
 
-label:first-child {
+.formContainer label:first-child {
     margin: 0;
 }
 
@@ -163,6 +176,19 @@ span.meta {
     margin: 20px 15px;
     opacity: 0.6;
     font-weight: 200;
+}
+
+span.highlight {
+    font-size: 12px;
+    color: var(--light-white);
+    margin-left: 15px;
+    border-bottom: 1px solid var(--green);
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+span.highlight:hover {
+    color: var(--white);
 }
 
 .disclaimer {
@@ -177,33 +203,27 @@ span.meta {
 
 .disclaimer span.highlight {
     color: var(--white);
-    border-bottom: 1px solid var(--green);
     padding-left: 0;
-    cursor: pointer;
+    margin-left: 3px;
 }
 
 .checkboxStyle {
-    width: 25px;
+    width: 20px;
     position: relative;
     float: left;
+    margin-top: 4px;
 }
 
-/**
- * Create the box for the checkbox
- */
 .checkboxStyle label {
     cursor: pointer;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     top: 0;
     left: 0;
-    background: var(--light-green);
     margin: 0;
+    background: var(--light-green);
 }
 
-/**
- * Display the tick inside the checkbox
- */
 .checkboxStyle label:after {
     opacity: 0.7;
     content: '';
@@ -211,17 +231,14 @@ span.meta {
     width: 9px;
     height: 5px;
     background: transparent;
-    top: 9px;
-    left: 7px;
+    top: 7px;
+    left: 6px;
     border: 3px solid var(--white);
     border-top: none;
     border-right: none;
     transform: rotate(-45deg);
 }
 
-/**
- * Create the hover event of the tick
- */
 .checkboxStyle label:hover::after {
     opacity: 1;
 }
@@ -230,11 +247,9 @@ span.meta {
     background: var(--green);
 }
 
-/**
- * Create the checkbox state for the tick
- */
-.checkboxStyle input[type=checkbox]:checked + label:after {
+.checkboxStyle input[type=checkbox]:checked + label, .checkboxStyle input[type=checkbox]:checked + label:after {
     opacity: 1;
+    background: var(--green);
 }
 
 .checkboxStyle input {
@@ -244,5 +259,9 @@ span.meta {
 @media only screen and (max-width: 768px) {
     .col-sm-12.radiusRight {
         border-radius: 10px;
+    }
+
+    .container-fluid {
+        padding: 0;
     }
 }
