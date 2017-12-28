@@ -1,0 +1,248 @@
+:root {
+    --light-green: #6cdfca;
+    --green: #00dab2;
+    --dark-green: #4dc0b5;
+    --dark-blue: #394c64;
+    --darker-blue: #212d3e;
+    --white: #fff;
+    --light-white: #92a3b6;
+    --grey: #4c5c71;
+    --light-red: #cb677a;
+    --dark-red: #9d3c58;
+    --green-white: #cdfff0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+}
+
+.login {
+    height: 100vh;
+    min-height: 680px;
+    padding: 60px 40px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+    -moz-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+    box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+}
+
+.greenBackground {
+    background: #6cdfca; /* Old Browsers */
+    background: -webkit-linear-gradient(top, #6cdfca, #4dc0b5); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #6cdfca, #4dc0b5); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #6cdfca, #4dc0b5); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #6cdfca, #4dc0b5); /*Standard*/
+}
+
+.redBackground {
+    background: #cb677a; /* Old Browsers */
+    background: -webkit-linear-gradient(top, #cb677a, #9d3c58); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #cb677a, #9d3c58); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #cb677a, #9d3c58); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #cb677a, #9d3c58); /*Standard*/
+}
+
+.blueBackground {
+    background: #394c64; /* Old Browsers */
+    background: -webkit-linear-gradient(top, #394c64, #212d3e); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top, #394c64, #212d3e); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top, #394c64, #212d3e); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #394c64, #212d3e); /*Standard*/
+}
+
+.pill {
+    margin: 10px 0;
+    font-size: 12px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.radiusLeft {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.radiusRight {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.rocket {
+    background: url(rocket.svg) center 60% no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.rocket h5 {
+    padding-top: 100px;
+    color: var(--green-white);
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.beer {
+    position: absolute;
+    top: 10px;
+    background: url(beer.svg) no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: 100% 100%;
+}
+
+.btn-secondary {
+    background-color: var(--grey);
+    border-color: var(--grey);
+    color: var(--light-white)
+}
+
+.btn-primary, .btn:hover {
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+
+.btn-primary {
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+    -moz-box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+    box-shadow: 0px 5px 30px 0px rgba(50, 50, 50, 0.71);
+}
+
+.formLogin {
+    padding: 30px;
+}
+
+.formLogin h5 {
+    font-weight: 200;
+    padding: 20px 0 5px 0;
+    cursor: pointer;
+}
+
+.formLogin h5.inactive {
+    opacity: 0.6;
+}
+
+.formLogin h5.active, .formLogin h5:hover {
+    border-bottom: 1px solid var(--green);
+    opacity: 1;
+}
+
+.formContainer {
+    clear: both;
+    padding-top: 15px;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    width: 100%;
+    font-size: 12px;
+    padding: 0 0 5px 0;
+    outline: 0;
+    color: var(--light-white)
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    padding: 0 0 5px 0;
+    margin: 25px 0 0 0;
+    opacity: 0.8;
+}
+
+label:first-child {
+    margin: 0;
+}
+
+span.meta {
+    margin: 20px 15px;
+    opacity: 0.6;
+    font-weight: 200;
+}
+
+.disclaimer {
+    margin-top: 20px;
+}
+
+.disclaimer span {
+    font-size: 12px;
+    padding: 0 0 5px 10px;
+    color: var(--light-white);
+}
+
+.disclaimer span.highlight {
+    color: var(--white);
+    border-bottom: 1px solid var(--green);
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.checkboxStyle {
+    width: 25px;
+    position: relative;
+    float: left;
+}
+
+/**
+ * Create the box for the checkbox
+ */
+.checkboxStyle label {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: var(--light-green);
+    margin: 0;
+}
+
+/**
+ * Display the tick inside the checkbox
+ */
+.checkboxStyle label:after {
+    opacity: 0.7;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 9px;
+    left: 7px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+/**
+ * Create the hover event of the tick
+ */
+.checkboxStyle label:hover::after {
+    opacity: 1;
+}
+
+.checkboxStyle label:hover {
+    background: var(--green);
+}
+
+/**
+ * Create the checkbox state for the tick
+ */
+.checkboxStyle input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+.checkboxStyle input {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .col-sm-12.radiusRight {
+        border-radius: 10px;
+    }
+}
