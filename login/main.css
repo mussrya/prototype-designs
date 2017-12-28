@@ -266,4 +266,8 @@ span.highlight:hover {
     .container-fluid {
         padding: 0;
     }
+
+    .login {
+        padding: 40px;
+    }
 }
