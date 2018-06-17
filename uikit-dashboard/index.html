@@ -1,0 +1,305 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UIKit - Dashboard</title>
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <style>
+        body,
+        html {
+            background: #fcfcfd;
+            min-width: 1280px;
+        }
+
+        .uk-navbar-nav>li.uk-active {
+            border-bottom: 3px solid #24b4f2;
+        }
+
+        .uk-navbar-nav {
+            font-weight: bold;
+        }
+
+        .uk-navbar-container:not(.uk-navbar-transparent) {
+            background: white;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .uk-search-default .uk-search-input {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+        }
+
+        .uk-button-custom {
+            border-radius: 5px;
+            background: white;
+            border-color: #65c4ee;
+            color: #999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+        }
+
+        .uk-card {
+            border-radius: 5px;
+        }
+
+        .customMargin {
+            margin: 0 0 20px 0;
+        }
+
+        .darkBlue {
+            background: #0e3f88;
+        }
+
+        .mediumBlue {
+            background: #0e5ace;
+        }
+
+        .lighterBlue {
+            background: #3e89fa;
+        }
+
+        .teal {
+            background: #0f9bd7;
+        }
+
+        .lightTeal {
+            background: #1bb3f3;
+        }
+
+        .blueBorderText {
+            border: 1px solid #64c4ee;
+            padding: 9px 19px 29px 19px;
+        }
+
+        .blueBorderText>h2,
+        .blueBorderText>.uk-icon {
+            color: #64c4ee;
+        }
+
+        .customCardPad {
+            padding: 10px 20px 30px 20px;
+        }
+
+        .customIconMargin {
+            margin-bottom: 10px;
+        }
+
+        .customH2Margin {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .customMetaFont {
+            font-size: 10px;
+        }
+
+        .uk-text-extra-small {
+            font-size: 12px
+        }
+
+        span.active {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav uk-animation-slide-top">
+                <li>
+                    <a href="">
+                        <img src="logo.png" height="30px" width="180px" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active uk-margin-right uk-animation-slide-top">
+                    <a href="" class="uk-text-capitalize">
+                        <span class="uk-margin-small-right" uk-icon="icon: home"></span>My Dashboard</a>
+                </li>
+                <li class="uk-margin-left uk-margin-right uk-animation-slide-top">
+                    <a href="" class="uk-text-capitalize">
+                        <span class="uk-margin-small-right" uk-icon="icon: users"></span>My Joiners</a>
+                </li>
+                <li class="uk-margin-left uk-animation-slide-top">
+                    <a href="" class="uk-text-capitalize">
+                        <span class="uk-margin-small-right" uk-icon="icon: tag"></span>My Deals</a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right uk-animation-slide-top">
+            <img class="uk-border-circle uk-margin-right" src="https://images.pexels.com/photos/555790/pexels-photo-555790.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                width="50" height="50" alt="Border circle">
+        </div>
+    </nav>
+    <div class="uk-grid uk-animation-slide-bottom">
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-4@s uk-height-1-1">
+            <ul class="uk-nav-default uk-nav-parent-icon uk-padding" uk-nav>
+                <li class="uk-active">
+                    <a href="#">
+                        <span class="uk-margin-small-right" uk-icon="icon: list"></span>All Accounts
+                        <span class="uk-align-right uk-margin-right">30</span>
+                    </a>
+                </li>
+                <br/>
+                <li>
+                    <a href="#">
+                        <span class="uk-margin-small-right" uk-icon="icon: social"></span>Shared With Me
+                        <span class="uk-align-right uk-margin-right">4</span>
+                    </a>
+                </li>
+                <br/>
+                <li>
+                    <a href="#">
+                        <span class="uk-margin-small-right" uk-icon="icon: forward"></span>Ones I've Shared
+                        <span class="uk-align-right uk-margin-right">0</span>
+                    </a>
+                </li>
+                <br/>
+                <li>
+                    <a href="#">
+                        <span class="uk-margin-small-right" uk-icon="icon: mail"></span>Found In Email
+                        <span class="uk-align-right uk-margin-right">0</span>
+                    </a>
+                </li>
+                <br/>
+            </ul>
+        </div>
+
+        <div class="uk-width-3-4@s uk-margin-top">
+            <div uk-grid class="uk-padding uk-animation-slide-top">
+                <div class="uk-width-3-4">
+                    <form class="uk-width-1-1 uk-search uk-search-default">
+                        <div class="">
+                            <span uk-search-icon></span>
+                            <input class="uk-search-input" type="search" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+                <div class="uk-width-1-4">
+                    <button class="uk-width-1-1 uk-text-capitalize uk-button uk-button-default uk-button-custom">Find Accounts In
+                        <span class="uk-margin-small-right" uk-icon="icon: google"></span>
+                    </button>
+                </div>
+            </div>
+            <div uk-grid class="uk-grid uk-width-1-1@s uk-align-right uk-margin-remove-top uk-padding-remove-top uk-padding-small uk-animation-slide-top">
+                <p class="uk-text-meta uk-text-extra-small uk-text-right uk-margin-right">
+                    View membership as:
+                    <span class="uk-margin-left active" uk-icon="icon: list"></span>
+                    <span class="active">LIST</span>
+                    <span class="uk-margin-left" uk-icon="icon: thumbnails"></span> CARDS
+                </p>
+            </div>
+            <div uk-grid class="uk-padding uk-padding-remove-top uk-grid uk-child-width-1-6 uk-margin-remove-top uk-animation-slide-bottom">
+                <div class="uk-padding-left">
+                    <div class="uk-card uk-card-primary uk-card-body darkBlue customCardPad">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: move"></span>
+                        <h2 class="customH2Margin">348</h2>
+                        <div class="uk-text-meta customMetaFont">Total Memberships</div>
+                    </div>
+                </div>
+                <div class="uk-margin-remove">
+                    <div class="uk-card uk-card-primary uk-card-body mediumBlue customCardPad">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: cart"></span>
+                        <h2 class="customH2Margin">20</h2>
+                        <div class="uk-text-meta customMetaFont">Retail</div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="uk-card uk-card-primary uk-card-body lighterBlue customCardPad">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: comments"></span>
+                        <h2 class="customH2Margin">40</h2>
+                        <div class="uk-text-meta customMetaFont">Social Networks</div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="uk-card uk-card-primary uk-card-body teal customCardPad">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: tv"></span>
+                        <h2 class="customH2Margin">38</h2>
+                        <div class="uk-text-meta customMetaFont">Entertainment</div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="uk-card uk-card-primary uk-card-body lightTeal customCardPad">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: calendar"></span>
+                        <h2 class="customH2Margin">150</h2>
+                        <div class="uk-text-meta customMetaFont">News</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body blueBorderText">
+                        <span class="uk-align-right customIconMargin" uk-icon="icon: thumbnails"></span>
+                        <h2 class="customH2Margin">+100</h2>
+                        <div class="uk-text-meta customMetaFont">Others</div>
+                    </div>
+                </div>
+            </div>
+            <div uk-grid class="uk-padding uk-padding-remove-top uk-grid uk-child-width-1-1 uk-margin-remove-top uk-animation-slide-bottom">
+                <div class="uk-padding-left">
+                    <div class="uk-card uk-card-default uk-card-body uk-padding">
+                        <canvas id="line-chart" width="400" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script>
+        Chart.defaults.scale.gridLines.display = false;
+
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: ['12-06-18', '13-06-18', '14-06-18', '15-06-18', '16-06-18', '17-06-18', '18-06-18', '19-06-18', '20-06-18', '21-06-18'],
+                datasets: [{
+                    data: [5, 5, 8, 8, 8, 12, 14, 19, 20, 20],
+                    label: "Retail",
+                    borderColor: "#0e5ace",
+                    backgroundColor: "rgb(14, 90, 206, 0.1)",
+                    fill: true
+                }, {
+                    data: [10, 19, 32, 38, 38, 39, 40, 40, 40, 40],
+                    label: "Social Networks",
+                    borderColor: "#3e89fa",
+                    backgroundColor: "rgb(62, 137, 250, 0.1)",
+                    fill: true
+                }, {
+                    data: [1, 5, 8, 18, 21, 22, 25, 30, 35, 38],
+                    label: "Entertainment",
+                    borderColor: "#0f9bd7",
+                    backgroundColor: "rgb(15, 155, 215, 0.1)",
+                    fill: true
+                }, {
+                    data: [10, 30, 100, 101, 108, 120, 125, 130, 148, 150],
+                    label: "News",
+                    borderColor: "#1bb3f3",
+                    backgroundColor: "rgb(27, 179, 243, 0.1)",
+                    fill: true
+                }, {
+                    data: [10, 30, 70, 80, 100, 100, 100, 100, 100, 100],
+                    label: "Others",
+                    borderColor: "#64c4ee",
+                    backgroundColor: "rgb(100, 196, 238, 0.1)",
+                    fill: true
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                lineTension: 10
+            }
+        });
+    </script>
+</body>
+
+</html>
