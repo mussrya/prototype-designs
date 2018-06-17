@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cryto tracker">
+
+    <title>Crypto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../libraries/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">CryptoTracker</a>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="https://www.cryptocompare.com/mining/calculator/eth?HashingPower=174&HashingUnit=MH%2Fs&PowerConsumption=0&CostPerkWh=0">Calculators</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.cryptocompare.com/">Coin Prices</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.kraken.com/en-us/login">Wallet</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row marginTop20">
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card greenBar card--minHeight">
+                <div class="card-block" id="highestHour">
+                    <h4 class="card-title">Top 1H</h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card greenBar card--minHeight">
+                <div class="card-block" id="highestDay">
+                    <h4 class="card-title">Top 24H</h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card redBar card--minHeight">
+                <div class="card-block" id="lowestHour">
+                    <h4 class="card-title">Lowest 1H</h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card redBar card--minHeight">
+                <div class="card-block" id="lowestDay">
+                    <h4 class="card-title">Lowest 24H</h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row marginTop40">
+        <div class="col-12">
+            <h3>Watched currencies</h3>
+            <div class="card card--padding">
+                <table class="table table-responsive table-striped">
+                    <thead class="blueBg">
+                    <tr>
+                        <th class="hidden-md-down">ID</th>
+                        <th class="hidden-md-down">Symbol</th>
+                        <th>Name</th>
+                        <th>Current Price $</th>
+                        <th>% Change (H)</th>
+                        <th>% Change (D)</th>
+                        <th class="hidden-md-down">% Change (W)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="watchedCurrencies">
+                    <div class="text-center loader">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        ' +
+                        ' xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px"
+                        viewBox="0 0 24 30"' +
+                        ' style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <rect x="0" y="0" width="4" height="10" fill="#2196f3"
+                        ' +
+                        ' transform="translate(0 3.41582e-7)">
+                        <animateTransform attributeType="xml" attributeName="transform"
+                        ' +
+                        'type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s"
+                        repeatCount="indefinite"></animateTransform>' +
+                        '</rect>
+                        <rect x="10" y="0" width="4" height="10" fill="#2196f3" transform="translate(0 13.3333)">' +
+                            '
+                            <animateTransform attributeType="xml" attributeName="transform" type="translate"
+                            ' +
+                            'values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s"
+                            repeatCount="indefinite"></animateTransform></rect>
+                        ' +
+                        '
+                        <rect x="20" y="0" width="4" height="10" fill="#2196f3" transform="translate(0 13.3333)">' +
+                            '
+                            <animateTransform attributeType="xml" attributeName="transform" type="translate"
+                                              values="0 0; 0 20; 0 0"
+                            ' +
+                            ' begin="0.4s" dur="0.6s" repeatCount="indefinite"></animateTransform></rect>
+                        </svg></div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="axios.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -10,7 +10,13 @@
     <meta name="twitter:site" content="@ryan.musselwhite">
     <meta name="twitter:title" content="An inbox dashboard prototype design">
     <meta name="twitter:description" content="An inbox dashboard prototype design for messaging">
-    <meta name="twitter:image" content="http://ryan-musselwhite.com/prototype-designs/message-dashboard/twitter.png">
+    <meta name="twitter:image" content="https://ryanmusselwhite.com/prototype-designs/message-dashboard/twitter.png">
+
+    <meta property="og:title" content="Inbox dashboard design" />
+    <meta property="og:description" content="An inbox dashboard prototype design" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryanmusselwhite.com/prototype-designs/message-dashboard"/>
+    <meta property="og:image" content="https://ryanmusselwhite.com/prototype-designs/message-dashboard/twitter.png"/>
 
     <title>Inbox dashboard design</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -23,7 +29,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-2 menu noPadding" id="sideMenu">
+        <div class="hidden-sm-down col-md-4 col-lg-2 menu noPadding" id="sideMenu">
             <div class="topLogo">
                 <h3 class="textWhite">MsgDash</h3>
             </div>
@@ -32,7 +38,8 @@
                     <a href="#"><i class="fa fa-circle-o"></i> Dashboard</a>
                 </li>
                 <li class="active">
-                    <a href="#"><i class="fa fa-envelope-o"></i> Inbox</a>
+                    <a href="#"><i class="fa fa-envelope-o"></i> Inbox <span
+                            class="notification pull-right">2</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-user-o"></i> Find People</a>
@@ -45,16 +52,284 @@
                 </li>
             </ul>
         </div>
+        <div class="col-sm-12 col-md-8 col-lg-10 flexColumn">
+            <div class="row paddingTop15 backgroundWhite shadowBottom zIndex2">
+                <div class="col-6 col-sm-6">
+                    <div class="searchBox">
+                        <i class="fa fa-search"></i>
+                        <input class="search" placeholder="Search"/>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6">
+                    <div class="pull-right">
+                        <div class="topNotification pull-left">
+                            <div class="smallNotification">3</div>
+                            <i class="fa fa-bell"></i>
+                        </div>
+                        <div class="topNotification pull-left">
+                            <div class="smallNotification">3</div>
+                            <i class="fa fa-comment"></i>
+                        </div>
+                        <img src="lady1.jpg" class="avatarImage pointer"/>
+                        <span class="hidden-md-down username pointer">Maddie Parker</span>
+                        <i class="fa fa-chevron-down pointer"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row paddingTop25 backgroundWhite shadowBottom zIndex1">
+                <div class="col-6 col-sm-6">
+                    <div class="hidden-md-up navbar-light">
+                        <button class="navbar-toggler pull-left pointer" type="button" data-toggle="collapse"
+                                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <h5 class="topMenu">All Messages
+                        <span class="hidden-sm-down textAccent pointer">(100)</span>
+                        <i class="hidden-sm-down fa fa-chevron-down textAccent pointer"></i>
+                    </h5>
+                </div>
+                <div class="col-6 col-sm-6">
+                    <button class="btn btnPurple pull-right pointer">
+                        New Message <i class="fa fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row flexRow">
+                <div class="col-sm-6 messagesList backgroundMidGrey">
+                    <div class="row messageBar unread">
+                        <div class="col-4 noPadding">
+                            <img src="2.jpg" class="avatarImage--Large pointer"/>
+                            <div class="pull-right">
+                                <p class="titleText">
+                                    Cody Benson
+                                </p>
+                                <div>
+                                    <div class="circleIndicator redBorder pull-left">
+                                    </div>
+                                    <span class="metadata">Not Replied</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="titleText">
+                                Lorem ipsum dolor sit amet
+                            </p>
+                            <p class="messageText">
+                                Nullam convallis turpis vitae turpis...
+                            </p>
+                        </div>
+                        <div class="col-2 noPadding">
+                            <p class="verticalMenu pull-right"></p>
+                            <p class="timeText">3:33 PM</p>
+                        </div>
+                    </div>
+                    <div class="row messageBar">
+                        <div class="col-4 noPadding">
+                            <img src="3.jpg" class="avatarImage--Large pointer"/>
+                            <div class="pull-right">
+                                <p class="titleText">
+                                    Cody Benson
+                                </p>
+                                <div>
+                                    <div class="circleIndicator yellowBorder pull-left">
+                                    </div>
+                                    <span class="metadata">Contacted</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="titleText">
+                                Lorem ipsum dolor sit amet
+                            </p>
+                            <p class="messageText">
+                                Nullam convallis turpis vitae turpis...
+                            </p>
+                        </div>
+                        <div class="col-2 noPadding">
+                            <p class="verticalMenu pull-right"></p>
+                            <p class="timeText">3:33 PM</p>
+                        </div>
+                    </div>
+                    <div class="row messageBar active">
+                        <div class="col-4 noPadding">
+                            <img src="4.jpg" class="avatarImage--Large pointer"/>
+                            <div class="pull-right">
+                                <p class="titleText">
+                                    Cody Benson
+                                </p>
+                                <div>
+                                    <div class="circleIndicator greenBorder pull-left"></div>
+                                    <span class="metadata">Replied</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="titleText">
+                                Lorem ipsum dolor sit amet
+                            </p>
+                            <p class="messageText">
+                                Nullam convallis turpis vitae turpis...
+                            </p>
+                        </div>
+                        <div class="col-2 noPadding">
+                            <p class="verticalMenu pull-right"></p>
+                            <p class="timeText">3:33 PM</p>
+                        </div>
+                    </div>
+                    <div class="row messageBar">
+                        <div class="col-4 noPadding">
+                            <img src="5.jpg" class="avatarImage--Large pointer"/>
+                            <div class="pull-right">
+                                <p class="titleText">
+                                    Cody Benson
+                                </p>
+                                <div>
+                                    <div class="circleIndicator greenBorder pull-left">
+                                    </div>
+                                    <span class="metadata">Replied</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="titleText">
+                                Lorem ipsum dolor sit amet
+                            </p>
+                            <p class="messageText">
+                                Nullam convallis turpis vitae turpis...
+                            </p>
+                        </div>
+                        <div class="col-2 noPadding">
+                            <p class="verticalMenu pull-right"></p>
+                            <p class="timeText">3:33 PM</p>
+                        </div>
+                    </div>
+                    <div class="row messageBar unread">
+                        <div class="col-4 noPadding">
+                            <img src="6.jpg" class="avatarImage--Large pointer"/>
+                            <div class="pull-right">
+                                <p class="titleText">
+                                    Cody Benson
+                                </p>
+                                <div>
+                                    <div class="circleIndicator redBorder pull-left">
+                                    </div>
+                                    <span class="metadata">Not Replied</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 noPadding">
+                            <p class="titleText">
+                                Lorem ipsum dolor sit amet
+                            </p>
+                            <p class="messageText">
+                                Nullam convallis turpis vitae turpis...
+                            </p>
+                        </div>
+                        <div class="col-2 noPadding">
+                            <p class="verticalMenu pull-right"></p>
+                            <p class="timeText">3:33 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 singleMessage backgroundLightGrey">
+                    <div class="row paddingTop25 backgroundWhite shadowBottom zIndex2">
+                        <div class="col-6">
+                            <h5>Lorem ipsum dolor sit amet</h5>
+                            <p class="metaFrom">From: <strong>Cody Benson</strong></p>
+                        </div>
+                        <div class="col-6">
+                            <div class="selectStatus">
+                                <div class="circleIndicator greenBorder pull-left status"></div>
+                                <select>
+                                    <option>
+                                        Replied
+                                    </option>
+                                    <option>
+                                        Not Replied
+                                    </option>
+                                    <option>
+                                        Contacted
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="message pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
+                                    Hi Cody nice to meet you!
+                                    <span class="time">
+                                        11:43 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    Hi Maddie, nice to meet you too! How are you?
+                                    <span class="time">
+                                        11:43 AM
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
+                                    I am really well thanks, how about you?
+                                    <span class="time">
+                                        11:43 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    I'm not too bad thanks.
+                                    <span class="time">
+                                        11:44 AM
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-right">
+                                <span class="bubble bubbleRight bubblePurple pull-right">
+                                    I have a very interesting job prospect you might be interested in, it relates to
+                                    front-end design.
+                                    <span class="time">
+                                        11:44 AM
+                                    </span>
+                                </span>
+                                <img class="avatarImage pull-right" src="lady1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="message pull-left">
+                                <img class="avatarImage avatarImage--Left pull-left" src="4.jpg"/>
+                                <span class="bubble bubbleLeft bubbleWhite pull-left">
+                                    That sounds interesting, could you send me over the information?
+                                    <span class="time">
+                                        11:45 AM
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript">
-    /*document.getElementById('').addEventListener(
-        'click', function ()
-        {
-            
-        }
-    );*/
-</script>
 </body>
 </html>
